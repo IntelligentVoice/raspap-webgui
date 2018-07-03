@@ -134,6 +134,19 @@ function setupBtns() {
         applyNetworkSettings();
     });
 }
+function add_row()
+{
+ $rowno=$("#ip_table tr").length;
+ $rowno=$rowno;
+ $gateway=$("#gateway").val();
+ $("#ip_table tr:last").after( '<tr><th scope="row">'+$rowno+'</th><td><input type="text" name="ip[]" placeholder="Enter IP Address"></td><td><input type="text" name="email[]" placeholder="Enter Email"></td><td><input type="text" name="gateway[]" placeholder="'+$gateway+'"></td><td><a href="#" onclick="delete_row(\'row'+$rowno+'\');" class="btn btn-primary a-btn-slide-text"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a></td></tr>');
+
+}
+
+function delete_row(rowno)
+{
+ $('#'+rowno).remove();
+}
 
 $().ready(function(){
     csrf = $('#csrf_token').val();

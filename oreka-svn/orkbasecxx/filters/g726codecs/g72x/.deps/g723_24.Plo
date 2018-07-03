@@ -1,0 +1,5 @@
+g723_24.lo: g723_24.c /usr/include/stdc-predef.h g72x.h
+
+/usr/include/stdc-predef.h:
+
+g72x.h:

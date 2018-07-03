@@ -248,6 +248,7 @@ function patch_system_files() {
         "/bin/cp /etc/raspap/networking/dhcpcd.conf /etc/dhcpcd.conf"
         "/etc/raspap/hostapd/enablelog.sh"
         "/etc/raspap/hostapd/disablelog.sh"
+        "/usr/sbin/service arp restart"
     )
 
     # Check if sudoers needs patching
